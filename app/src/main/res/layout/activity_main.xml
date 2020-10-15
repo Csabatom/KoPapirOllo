@@ -19,12 +19,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    
+    <!-- A saját választásom KÉP-->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/rock"/>
+        android:src="@drawable/rock"
+        android:id="@+id/IMG_SajatValasztott"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -38,17 +39,19 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- A gép választása KÉP-->
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:src="@drawable/rock"/>
+        android:src="@drawable/rock"
+        android:id="@+id/IMG_GepValasztott"/>
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Eredmény: Ember: 0 Computer: 0"
-        android:textSize="25dp"
+        android:textSize="20dp"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,14 +67,17 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/BTN_Ko"
             android:text="Kő"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/BTN_Papir"
             android:text="Papír"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/BTN_Ollo"
             android:text="Olló"/>
     </LinearLayout>
 
