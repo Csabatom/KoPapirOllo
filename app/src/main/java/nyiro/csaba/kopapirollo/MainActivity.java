@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         this.ollo = findViewById(R.id.BTN_Ollo);
         this.sajatValasztott = findViewById(R.id.IMG_SajatValasztott);
         this.gepValasztott = findViewById(R.id.IMG_GepValasztott);
+        this.pontok = findViewById(R.id.pontok);
 
         rnd = new Random();
 
@@ -43,13 +44,19 @@ public class MainActivity extends AppCompatActivity {
                 switch(gepValasztottIndex) {
                     case 0:
                         gepValasztott.setImageResource(R.drawable.rock);
+                        // DÖNTETLEN
                         break;
                     case 1:
                         gepValasztott.setImageResource(R.drawable.paper);
-                        // BEÁLLÍTANI A PONTOKAT
+                        // NYERT A GÉP
+                        gepNyeresPont++;
+                        pontok.setText("Eredmény: Ember: " + sajatNyeresPont + " Computer: " + gepNyeresPont);
                         break;
                     case 2:
                         gepValasztott.setImageResource(R.drawable.scissors);
+                        // NYERT A JÁTÉKOS
+                        sajatNyeresPont++;
+                        pontok.setText("Eredmény: Ember: " + sajatNyeresPont + " Computer: " + gepNyeresPont);
                         break;
                 }
             }
@@ -63,12 +70,19 @@ public class MainActivity extends AppCompatActivity {
                 switch(gepValasztottIndex) {
                     case 0:
                         gepValasztott.setImageResource(R.drawable.rock);
+                        // NYERT A JÁTÉKOS
+                        sajatNyeresPont++;
+                        pontok.setText("Eredmény: Ember: " + sajatNyeresPont + " Computer: " + gepNyeresPont);
                         break;
                     case 1:
                         gepValasztott.setImageResource(R.drawable.paper);
+                        // DÖNTETLEN
                         break;
                     case 2:
                         gepValasztott.setImageResource(R.drawable.scissors);
+                        // NYERT A GÉP
+                        gepNyeresPont++;
+                        pontok.setText("Eredmény: Ember: " + sajatNyeresPont + " Computer: " + gepNyeresPont);
                         break;
                 }
             }
@@ -82,12 +96,19 @@ public class MainActivity extends AppCompatActivity {
                 switch(gepValasztottIndex) {
                     case 0:
                         gepValasztott.setImageResource(R.drawable.rock);
+                        // NYERT A GÉP
+                        gepNyeresPont++;
+                        pontok.setText("Eredmény: Ember: " + sajatNyeresPont + " Computer: " + gepNyeresPont);
                         break;
                     case 1:
                         gepValasztott.setImageResource(R.drawable.paper);
+                        // NYERT A JÁTÉKOS
+                        sajatNyeresPont++;
+                        pontok.setText("Eredmény: Ember: " + sajatNyeresPont + " Computer: " + gepNyeresPont);
                         break;
                     case 2:
                         gepValasztott.setImageResource(R.drawable.scissors);
+                        // DÖNTETLEN
                         break;
                 }
             }
